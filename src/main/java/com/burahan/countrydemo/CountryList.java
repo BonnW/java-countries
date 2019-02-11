@@ -52,4 +52,21 @@ public class CountryList
         return returnList;
     }
 
+    public ArrayList<Country> listBySize(int num)
+    {
+        ArrayList<Country> returnList = new ArrayList<Country>();
+
+        for (Country country : countryList)
+        {
+            if (country.getName().length() >= num)
+            {
+                returnList.add(country);
+            }
+        }
+        returnList.sort((c1, c2) ->
+                c1.getName().compareToIgnoreCase(c2.getName()));
+
+        return returnList;
+    }
+
 }

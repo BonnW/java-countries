@@ -17,8 +17,14 @@ public class CountryController
     }
 
     @RequestMapping("begin")
-    public ArrayList<Country> firstLetter(@RequestParam(value = "letter") char letter)
+    public ArrayList<Country> getByFirstLetter(@RequestParam(value = "letter") char letter)
     {
         return CountryDemoApplication.ourCountryList.getByFirstLetter(letter);
+    }
+
+    @RequestMapping("size")
+    public ArrayList<Country> listBySize(@RequestParam(value = "num") int num)
+    {
+        return CountryDemoApplication.ourCountryList.listBySize(num);
     }
 }
