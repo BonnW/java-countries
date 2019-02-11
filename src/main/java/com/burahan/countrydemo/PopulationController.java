@@ -21,4 +21,10 @@ public class PopulationController
     {
         return CountryDemoApplication.ourCountryList.getMinPop();
     }
+
+    @RequestMapping("/max")
+    public Country getMaxPop()
+    {
+        return CountryDemoApplication.ourCountryList.getMaxPop();
+    }
 }

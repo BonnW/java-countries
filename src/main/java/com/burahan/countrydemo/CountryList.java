@@ -88,19 +88,28 @@ public class CountryList
 
     public Country getMinPop()
     {
-        Country returnCountry = countryList.get(0);
+        Country returnMinCountry = countryList.get(0);
 
         for (Country c : countryList)
-        {
-            if (c.getPopuluation() <= returnCountry.getPopuluation())
+            if (c.getPopuluation() <= returnMinCountry.getPopuluation())
             {
-                returnCountry = c;
+                returnMinCountry = c;
             }
-        }
 
-        return returnCountry;
+        return returnMinCountry;
     }
 
+    public Country getMaxPop()
+    {
+        Country returnMaxCountry = countryList.get(0);
 
+        for (Country c : countryList)
+            if (c.getPopuluation() >= returnMaxCountry.getPopuluation())
+            {
+                returnMaxCountry = c;
+            }
+
+        return returnMaxCountry;
+    }
 
 }
