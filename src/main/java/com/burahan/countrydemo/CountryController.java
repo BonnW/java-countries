@@ -22,9 +22,15 @@ public class CountryController
         return CountryDemoApplication.ourCountryList.getByFirstLetter(letter);
     }
 
-    @RequestMapping("size")
-    public ArrayList<Country> listBySize(@RequestParam(value = "num") int num)
+    @RequestMapping("namesize")
+    public ArrayList<Country> listByNameSize(@RequestParam(value = "letters") int num)
     {
-        return CountryDemoApplication.ourCountryList.listBySize(num);
+        return CountryDemoApplication.ourCountryList.listByNameSize(num);
+    }
+
+    @RequestMapping("popsize")
+    public ArrayList<Country> listByPopSize(@RequestParam(value = "people") int num)
+    {
+        return CountryDemoApplication.ourCountryList.listByPopSize(num);
     }
 }
