@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/names")
-public class CountryController
+public class NameController
 {
     @RequestMapping("/all")
     public ArrayList<Country> getAllCountries()
@@ -33,4 +33,6 @@ public class CountryController
     {
         return CountryDemoApplication.ourCountryList.listByPopSize(num);
     }
+
 }
+
